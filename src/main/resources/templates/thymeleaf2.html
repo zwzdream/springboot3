@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Learning Thymeleaf </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body th:object="${user}">
+
+    <p>ID: <span th:text="*{id}"></span></p>
+    <p>Name: <span th:text="*{name}"></span></p>
+    <p>Password: <span th:text="*{password}"></span></p>
+    <p>Date: <span th:text="*{date}"></span></p>
+    <p>Date: <span th:text="*{date!=null}?*{#dates.format(date,'dd MMMM yyyy')}: '(no age specified)'"></span></p>
+    
+</body>
+</html>

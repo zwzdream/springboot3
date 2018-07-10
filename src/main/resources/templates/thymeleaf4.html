@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Learning Thymeleaf </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+Preprocessed expressions are exactly like normal ones, but appear surrounded by a double underscore symbol (like __${expression}__).
+   <p th:text="#{article.__${txtVar}__}">Some text here...</p>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Learning Thymeleaf </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="#{home.welcome}">Welcome to our grocery store!</p>
+    <p th:text="'中文'+#{home.welcome}+'显示'">Welcome to our grocery store!</p>
+    
+    <p th:text="'中文'+#{home.welcome2}+'显示'">Welcome to our grocery store!</p>
+    <p th:utext="'中文'+#{home.welcome2}+'显示'">Welcome to our grocery store!</p>
+
+    <p th:text="|中文 #{home.welcome} 显示|">Welcome to our grocery store!</p>
+    <p th:text="|中文+ #{home.welcome}+显示|">Welcome to our grocery store!</p>
+    
+    
+       <p th:utext="'中文'+#{home.welcome3('用户')}+'显示'">Welcome to our grocery store!</p>
+    
+    
+    <p>Today is: <span th:text="${today}">13 february 2011</span></p>
+    <p th:inline="text">Today is: [[${today}]] !</p>
+    
+</body>
+</html>
